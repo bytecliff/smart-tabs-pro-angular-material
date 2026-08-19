@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (primary: mat.$azure-palette, theme-type: light),
+    typography: Inter,
+    density: 0
+  ));
+}
+
+:root {
+  --st-primary: #2563eb;
+  --st-text: #111827;
+  --st-muted: #64748b;
+  --st-border: #e2e8f0;
+  --st-surface: #fff;
+  --st-subtle: #f1f5f9;
+  --st-hover: #f8fafc;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: #fff; color: var(--st-text); font-family: Inter, sans-serif; }
+button { font: inherit; }
+.material-symbols-rounded { font-variation-settings: 'FILL' 0, 'wght' 400; }
+.mat-mdc-menu-panel.smart-menu { max-width: none; border-radius: 10px; }
